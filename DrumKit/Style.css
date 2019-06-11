@@ -24,6 +24,7 @@ html {
     background: rgba(0, 0, 0, 0.4);
     text-shadow: 0 0 .5rem;
     width: 5rem;
+    transition: all 0.8s;
 }
 
 kbd {
@@ -36,4 +37,10 @@ kbd {
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: #ffc600;
+}
+
+.transition {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
 }
