@@ -1,4 +1,5 @@
 window.addEventListener('keydown', playSound);
+window.addEventListener('keyup', removeTransition);
 
 function playSound(e) 
 {
@@ -7,4 +8,10 @@ function playSound(e)
     key.classList.add("transition");
     audio.currentTime = 0;
     audio.play();
+}
+
+function removeTransition(e)
+{
+    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+    key.classList.remove("transition");
 }
