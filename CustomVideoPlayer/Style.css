@@ -2,6 +2,10 @@ html {
     box-sizing: border-box;
 }
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -138,4 +142,18 @@ input[type=range]::-moz-range-thumb {
     border-radius: 50px;
     background: #ffc600;
     cursor: pointer;
+}
+
+.player:fullscreen {
+    max-width: none;
+    width: 100%;
+}
+  
+.player:-webkit-full-screen {
+    max-width: none;
+    width: 100%;
+}
+  
+.player_video {
+    width: 100%;
 }
