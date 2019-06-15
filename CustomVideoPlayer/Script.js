@@ -8,6 +8,7 @@ const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.player_slider');
 
 video.addEventListener('click', togglePlay);
+toggle.addEventListener('click', togglePlay);
 
 function togglePlay()
 {
