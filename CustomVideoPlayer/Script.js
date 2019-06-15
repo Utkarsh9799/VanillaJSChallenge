@@ -12,7 +12,23 @@ video.addEventListener('click', togglePlay);
 function togglePlay()
 {
     if(video.paused)
-    video.play();
-    else
-    video.pause();
+    {
+        video.play();
+    }
+    else if(video.play)
+    {
+        video.pause();
+    }
+    updateButton();
 }
+
+function updateButton()
+{
+    if(video.paused)
+    toggle.textContent="►";
+    else if(video.play)
+    toggle.textContent="❚ ❚";
+}
+
+
+
