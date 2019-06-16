@@ -31,5 +31,10 @@ function updateButton()
     toggle.textContent="❚ ❚";
 }
 
+video.addEventListener('timeupdate', updateProgress);
 
+function updateProgress()
+{
+    
+}
 
