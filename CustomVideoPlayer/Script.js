@@ -35,6 +35,7 @@ video.addEventListener('timeupdate', updateProgress);
 
 function updateProgress()
 {
-    
+    const time = (video.currentTime / video.duration) * 100;
+    progressBar.style.flexBasis = `${time}%`;
 }
 
