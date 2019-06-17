@@ -45,3 +45,10 @@ function skip()
 {
     video.currentTime += parseFloat(this.dataset.skip);
 }
+
+ranges.forEach(range => range.addEventListener('change', rangeUpdate));
+
+function rangeUpdate()
+{
+    video[this.name] = this.value;
+}
