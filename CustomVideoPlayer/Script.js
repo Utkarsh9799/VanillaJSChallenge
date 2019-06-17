@@ -47,6 +47,7 @@ function skip()
 }
 
 ranges.forEach(range => range.addEventListener('change', rangeUpdate));
+ranges.forEach(range => range.addEventListener('mousemove', rangeUpdate));
 
 function rangeUpdate()
 {
