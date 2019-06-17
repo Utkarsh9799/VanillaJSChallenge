@@ -39,3 +39,9 @@ function updateProgress()
     progressBar.style.flexBasis = `${time}%`;
 }
 
+skipButtons.forEach(button => button.addEventListener('click', skip));
+
+function skip()
+{
+    video.currentTime += parseFloat(this.dataset.skip);
+}
