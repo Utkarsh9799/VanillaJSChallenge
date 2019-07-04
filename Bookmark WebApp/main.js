@@ -22,6 +22,15 @@ function saveBookmark(e)
         // Setting to local storage
         localStorage.setItem('bookmarks',JSON.stringify(bookmarks));
     }
+    else
+    {
+        // Fetching existing bookmarks in Json form
+        var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+        // Adding the new bookmark to it
+        bookmarks.push(bookmark);
+        // Setting back to local storage
+        localStorage.setItem('bookmarks',JSON.stringify(bookmarks));
+    }
 
     e.preventDefault();
 }
