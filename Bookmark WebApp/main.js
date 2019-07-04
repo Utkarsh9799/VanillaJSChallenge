@@ -34,3 +34,11 @@ function saveBookmark(e)
 
     e.preventDefault();
 }
+
+// Displaying bookmarks
+function displayBookmark()
+{
+    // Fetching existing bookmarks in Json form
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    console.log(bookmarks);
+}
