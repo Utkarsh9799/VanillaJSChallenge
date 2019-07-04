@@ -40,5 +40,16 @@ function displayBookmark()
 {
     // Fetching existing bookmarks in Json form
     var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
-    console.log(bookmarks);
+    var bookmarkDisplay = document.getElementById('bookmarkDisplay');
+    
+    // Displaying bookmarks
+    bookmarkDisplay.innerHTML = '';
+    for(var i = 0;i < bookmarks.length; i++)
+    {
+        var name = bookmarks[i].name;
+        var url = bookmarks[i].url;
+
+        displayBookmark.innerHTML += '';
+    }
+
 }
