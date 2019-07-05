@@ -49,10 +49,13 @@ function displayBookmark()
         var name = bookmarks[i].name;
         var url = bookmarks[i].url;
 
-        displayBookmark.innerHTML += '<div class="card bg-light text-dark card-body">' +
+        bookmarkDisplay.innerHTML += '<div class="card bg-light text-dark card-body">' +
                                         '<h3>' + name + 
-                                        '<a class="btn btn-default" target="_blank" ' + 
-                                        'href="' + url + '">Visit</a> ' + '</h3>' +
+                                        '<a class="btn btn-info" target="_blank" ' + 
+                                        'href="' + url + '">Visit</a> ' + 
+                                        '<a onclick="removeBookmark(\''+url+'\')" '+ 'class="btn btn-danger"' + 
+                                        'target="_blank" ' + 'href="#">Delete</a> ' + 
+                                        '</h3>' +
                                      '</div>';
     }
 
