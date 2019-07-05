@@ -49,7 +49,11 @@ function displayBookmark()
         var name = bookmarks[i].name;
         var url = bookmarks[i].url;
 
-        displayBookmark.innerHTML += '';
+        displayBookmark.innerHTML += '<div class="card bg-light text-dark card-body">' +
+                                        '<h3>' + name + 
+                                        '<a class="btn btn-default" target="_blank" ' + 
+                                        'href="' + url + '">Visit</a> ' + '</h3>' +
+                                     '</div>';
     }
 
 }
