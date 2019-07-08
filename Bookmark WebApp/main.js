@@ -49,7 +49,7 @@ function removeBookmark(url)
         }
     }
     // Re setting bookmarks after deletion
-     
+    localStorage.setItem('bookmarks',JSON.stringify(bookmarks));
 }
 
 // Displaying bookmarks
