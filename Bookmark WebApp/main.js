@@ -38,7 +38,18 @@ function saveBookmark(e)
 // Deleting bookmarks
 function removeBookmark(url) 
 {
-    
+    // Retrieving bookmarks from local storage
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    // Looping through bookmarks
+    for(var i=0;i<bookmarks.lenght;i++)
+    {
+        if(bookmarks[i].url == url)
+        {
+            bookmarks.splice(i,1);
+        }
+    }
+    // Re setting bookmarks after deletion
+     
 }
 
 // Displaying bookmarks
