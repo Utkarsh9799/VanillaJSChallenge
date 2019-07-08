@@ -32,6 +32,8 @@ function saveBookmark(e)
         localStorage.setItem('bookmarks',JSON.stringify(bookmarks));
     }
 
+    displayBookmark();
+
     e.preventDefault();
 }
 
@@ -50,6 +52,9 @@ function removeBookmark(url)
     }
     // Re setting bookmarks after deletion
     localStorage.setItem('bookmarks',JSON.stringify(bookmarks));
+
+    // Displaying updated bookmarks
+    displayBookmark();
 }
 
 // Displaying bookmarks
@@ -71,7 +76,7 @@ function displayBookmark()
                                         ' <a class="btn btn-info" target="_blank" ' + 
                                         'href="' + url + '">Visit</a> ' + 
                                         '<a onclick="removeBookmark(\''+url+'\')" '+ 'class="btn btn-danger"' + 
-                                        'href="#">Delete</a> ' + 
+                                        'href="">Delete</a> ' + 
                                         '</h3>' +
                                      '</div>';
     }
