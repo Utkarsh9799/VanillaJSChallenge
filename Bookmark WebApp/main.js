@@ -35,6 +35,12 @@ function saveBookmark(e)
     e.preventDefault();
 }
 
+// Deleting bookmarks
+function removeBookmark(url) 
+{
+    
+}
+
 // Displaying bookmarks
 function displayBookmark()
 {
@@ -51,10 +57,10 @@ function displayBookmark()
 
         bookmarkDisplay.innerHTML += '<div class="card bg-light text-dark card-body">' +
                                         '<h3>' + name + 
-                                        '<a class="btn btn-info" target="_blank" ' + 
+                                        ' <a class="btn btn-info" target="_blank" ' + 
                                         'href="' + url + '">Visit</a> ' + 
                                         '<a onclick="removeBookmark(\''+url+'\')" '+ 'class="btn btn-danger"' + 
-                                        'target="_blank" ' + 'href="#">Delete</a> ' + 
+                                        'href="#">Delete</a> ' + 
                                         '</h3>' +
                                      '</div>';
     }
