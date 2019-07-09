@@ -7,7 +7,10 @@ function saveBookmark(e)
     var name = document.getElementById('siteName').value;
     var url = document.getElementById('siteUrl').value;
 
-
+    if(!validate(name,url))
+    {
+        return false;
+    }
 
     var bookmark = {
         name: name,
@@ -86,7 +89,7 @@ function displayBookmark()
 }
 
 // Validations
-function validate()
+function validate(name,url)
 {
     // To not accept the empty fields in form input
     if(!name || !url)
@@ -104,4 +107,6 @@ function validate()
         alert('Enter a valid url!');
         return false;
     }
+
+    return  true;
 }
