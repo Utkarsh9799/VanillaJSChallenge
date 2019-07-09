@@ -7,6 +7,12 @@ function saveBookmark(e)
     var name = document.getElementById('siteName').value;
     var url = document.getElementById('siteUrl').value;
 
+    if(!name || !url)
+    {
+        alert('Please fill the required fields!');
+        return false;
+    }
+
     var bookmark = {
         name: name,
         url: url
