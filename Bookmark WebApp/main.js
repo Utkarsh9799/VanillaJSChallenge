@@ -7,22 +7,7 @@ function saveBookmark(e)
     var name = document.getElementById('siteName').value;
     var url = document.getElementById('siteUrl').value;
 
-    // To not accept the empty fields in form input
-    if(!name || !url)
-    {
-        alert('Please fill the required fields!');
-        return false;
-    }
 
-    // To only accept a url in url field
-    var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
-    var regex = new RegExp(expression);
-
-    if(!url.match(regex))
-    {
-        alert('Enter a valid url!');
-        return false;
-    }
 
     var bookmark = {
         name: name,
@@ -98,4 +83,25 @@ function displayBookmark()
                                      '</div>';
     }
 
+}
+
+// Validations
+function validate()
+{
+    // To not accept the empty fields in form input
+    if(!name || !url)
+    {
+        alert('Please fill the required fields!');
+        return false;
+    }
+
+    // To only accept a url in url field
+    var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    var regex = new RegExp(expression);
+
+    if(!url.match(regex))
+    {
+        alert('Enter a valid url!');
+        return false;
+    }
 }
