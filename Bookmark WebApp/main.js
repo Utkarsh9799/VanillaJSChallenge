@@ -37,6 +37,9 @@ function saveBookmark(e)
         localStorage.setItem('bookmarks',JSON.stringify(bookmarks));
     }
 
+    // Clearing inputs after successful submission
+    document.getElementById('myForm').reset();
+
     displayBookmark();
 
     e.preventDefault();
